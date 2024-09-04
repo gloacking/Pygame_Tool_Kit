@@ -1,6 +1,6 @@
 # Pygame Tool Kit
 
-![Pygame Tool Kit Logo](https://yourlogo.url/logo.png) <!-- Add your logo URL here if you have one -->
+![Pygame Tool Kit Banner](/Pygame_Tool_Kit/img/banner.png)
 
 A powerful and flexible toolkit to simplify game development with Pygame.
 
