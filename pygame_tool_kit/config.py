@@ -51,10 +51,10 @@ config_data = load_config()
 
 FONT_PATH : str = load_config_required_path ("font")
 ASSETS_PATH : str = load_config_required_path ("assets")
-ICON_PATH : str = load_config_required_path ("icon")
 STORAGE_PATH : str = load_config_required_path ("storage")
 
-GAME_TITLE: str = config_data["game_title"] if (config_data.get ("game_title", False)) else "Game"
+ICON_PATH : str = config_data["icon_path"] if (config_data.get ("icon_path", False)) else None
+GAME_TITLE : str = config_data["game_title"] if (config_data.get ("game_title", False)) else "Game"
 
 if (config_data.get ("resolutions", False)):
 	RESOLUTIONS : tuple[tuple[int]] = tuple (tuple (resolution) for resolution in config_data["resolutions"])

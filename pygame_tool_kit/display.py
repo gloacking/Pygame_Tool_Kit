@@ -47,7 +47,8 @@ class Display ():
         EVENTS_MANAGER.subscribe (VIDEORESIZE, lambda event : self.rescale (event.w, event.h), context = "input")
 
         display.set_caption (GAME_TITLE)
-        display.set_icon (load (ICON_PATH))
+        if (ICON_PATH):
+            display.set_icon (load (ICON_PATH))
 
     def rescale (self, width : int, height : int) -> None:
 
