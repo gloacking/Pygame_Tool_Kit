@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup (
 	name = "Pygame_Tool_Kit",
-	version = "1.2.0",
+	version = "1.2.2",
 	author = "Gloacking",
 	description = "Un conjunto de herramientas útiles para el desarrollo de videojuegos con Pygame.",
 	long_description = open ("README.md").read (),

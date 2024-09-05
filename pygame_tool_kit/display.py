@@ -52,9 +52,8 @@ class Display ():
 
     def rescale (self, width : int, height : int) -> None:
 
-        self.window_size : tuple[int] = (max (RESOLUTIONS[0][0], width), max (RESOLUTIONS[0][1], height))
+        self.window_size : tuple[int] = (width, height)
         self.window_center : tuple[int] = (self.window_size[0] // 2, self.window_size[1] // 2)
-        self.window : Surface = display.set_mode (self.window_size, RESIZABLE)
 
         for i in range (len (RESOLUTIONS) - 1, -1, -1):
             if ((self.window_size[0] >= RESOLUTIONS[i][0]) and (self.window_size[1] >= RESOLUTIONS[i][1])):
