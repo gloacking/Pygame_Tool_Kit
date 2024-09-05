@@ -33,5 +33,5 @@ jobs:
     - name: Publish package to PyPI
       uses: pypa/gh-action-pypi-publish@v1.6.4  # Correct reference to the action
       with:
-        user: ${{ secrets.PYPI_USERNAME }}  # PyPI username from secrets
+        user: ${{ secrets.PYPI_TOKEN }}  # PyPI token from secrets
         password: ${{ secrets.PYPI_PASSWORD }}  # PyPI password from secrets
