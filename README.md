@@ -1,10 +1,11 @@
-# Pygame Tool Kit
-
-![Pygame Tool Kit Banner](/Pygame_Tool_Kit/img/banner.png)
+<h1 align = "center">
+	<img alt = "Pygame Tool Kit" src = "img/logo.png"/>
+	<br/>
+	Pygame Tool Kit
+</h1>
+<br/>
 
 A powerful and flexible toolkit to simplify game development with Pygame.
-
----
 
 ## Table of Contents
 
@@ -84,7 +85,7 @@ from pygame_tool_kit.constants import EVENTS_MANAGER
 
 # Funcion to call when the "quit" event is emitted
 def on_quit ():
-    print ("The game is closing")
+	print ("The game is closing")
 
 EVENTS_MANAGER.subscribe ("quit", on_quit)
 
