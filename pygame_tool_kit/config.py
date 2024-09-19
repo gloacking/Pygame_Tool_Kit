@@ -53,8 +53,10 @@ FONT_PATH : str = load_config_required_path ("font")
 ASSETS_PATH : str = load_config_required_path ("assets")
 STORAGE_PATH : str = load_config_required_path ("storage")
 
-ICON_PATH : str = config_data["icon_path"] if (config_data.get ("icon_path", False)) else None
-GAME_TITLE : str = config_data["game_title"] if (config_data.get ("game_title", False)) else "Game"
+ICON_PATH : str = config_data.get ("icon_path")
+GAME_TITLE : str = config_data.get ("game_title", "Game")
+STORAGE_WITH_JSON : bool = config_data.get ("storage_with_json", True)
+STORAGE_DATABASE_NAME : str = config_data.get ("storage_database_name", "")
 
 if (config_data.get ("resolutions", False)):
 	RESOLUTIONS : tuple[tuple[int]] = tuple (tuple (resolution) for resolution in config_data["resolutions"])

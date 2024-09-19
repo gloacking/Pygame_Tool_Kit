@@ -1,10 +1,9 @@
 """
 Module containing the Storage_Manager class for managing the loading and saving of data from JSON files.
 """
-
 from json import load, dump
 
-from .config import STORAGE_PATH
+from .config import STORAGE_PATH, STORAGE_WITH_JSON, STORAGE_DATABASE_NAME
 
 class Storage_Manager ():
 	"""
@@ -33,4 +32,10 @@ class Storage_Manager ():
 		with open (f"{STORAGE_PATH}/dynamic/{at}.json", "w") as file:
 			dump ({at : data}, file, indent = 4)
 
-STORAGE_MANAGER = Storage_Manager ()
+
+if (STORAGE_WITH_JSON):
+	STORAGE_MANAGER = Storage_Manager ()
+
+if (STORAGE_DATABASE_NAME):
+	from py_simple_select import Database_Manager
+	DATABASE_MANAGER = Database_Manager (f"{STORAGE_PATH}/{STORAGE_DATABASE_NAME}")

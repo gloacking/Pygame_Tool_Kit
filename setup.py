@@ -2,11 +2,11 @@ from setuptools import setup, find_packages
 
 setup (
 	name = "Pygame_Tool_Kit",
-	version = "1.2.2",
+	version = "1.3.0",
 	author = "Gloacking",
 	description = "Un conjunto de herramientas útiles para el desarrollo de videojuegos con Pygame.",
 	long_description = open ("README.md").read (),
-	long_description_content_type="text/markdown",
+	long_description_content_type = "text/markdown",
 	url = "https://github.com/gloacking/Pygame_Tool_Kit",
 	packages = find_packages (exclude = ["env*"]),
 	classifiers = [
@@ -16,7 +16,8 @@ setup (
 	],
 	python_requires = ">=3.10",
 	install_requires = [
-		"pygame"
+		"pygame",
+		"py_simple_select"
 	],
 	include_package_data = True
 )

@@ -33,11 +33,11 @@ class Keyboard ():
 		EVENTS_MANAGER.subscribe (KEYDOWN, lambda event : self.key_down_event (event.key), context = "input")
 		EVENTS_MANAGER.subscribe (KEYUP, lambda event : self.key_up_event (event.key), context = "input")
 
-	def key_down_event (self, key) -> None:
+	def key_down_event (self, key : str) -> None:
 
-		self.keys_held[key] = True
+		self.keys_held[key] : bool = True
 
-	def key_up_event (self, key) -> None:
+	def key_up_event (self, key : str) -> None:
 
 		self.keys_released[key] = True
 

@@ -148,17 +148,3 @@ This project is licensed under the MIT License.
 ---
 
 Thank you for using Pygame Tool Kit! I hope it helps you create amazing games with Python!
-Additional Notes:
-
-
-
-
-
-
-
-
-
-
-
-
-
