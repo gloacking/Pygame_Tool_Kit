@@ -61,4 +61,4 @@ class Events_Manager ():
 				for listener in self.listeners["input"][event.type]:
 					listener (event)
 
-EVENTS_MANAGER = Events_Manager ()
+EVENTS_MANAGER : Events_Manager = Events_Manager ()

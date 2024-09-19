@@ -1,5 +1,7 @@
 """
 Module containing the Storage_Manager class for managing the loading and saving of data from JSON files.
+
+Also contains the DATABASE_MANAGER constant for managing the interaction with a SQLite database.
 """
 from json import load, dump
 
@@ -32,10 +34,11 @@ class Storage_Manager ():
 		with open (f"{STORAGE_PATH}/dynamic/{at}.json", "w") as file:
 			dump ({at : data}, file, indent = 4)
 
-
-if (STORAGE_WITH_JSON):
-	STORAGE_MANAGER = Storage_Manager ()
+STORAGE_MANAGER : Storage_Manager = Storage_Manager () if (STORAGE_WITH_JSON) else None
 
 if (STORAGE_DATABASE_NAME):
 	from py_simple_select import Database_Manager
-	DATABASE_MANAGER = Database_Manager (f"{STORAGE_PATH}/{STORAGE_DATABASE_NAME}")
+	DATABASE_MANAGER : Database_Manager = Database_Manager (f"{STORAGE_PATH}/{STORAGE_DATABASE_NAME}")
+
+else:
+	DATABASE_MANAGER = None

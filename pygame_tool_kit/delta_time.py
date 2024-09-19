@@ -25,4 +25,4 @@ class Delta_Time ():
 		self.delta_time = time () - self.previous_time
 		self.previous_time = time ()
 
-DELTA_TIME = Delta_Time ()
+DELTA_TIME : Delta_Time = Delta_Time ()

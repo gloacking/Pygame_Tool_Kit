@@ -7,9 +7,10 @@ from .events_manager import EVENTS_MANAGER
 The events manager constant is used to manage events in the game.
 """
 
-from .storage_manager import STORAGE_MANAGER
+from .storage_manager import STORAGE_MANAGER, DATABASE_MANAGER
 """
 The storage manager constant is used to save and load game data from JSON files.
+The database manager constant is used to interact with a SQLite database.
 """
 
 from .delta_time import DELTA_TIME

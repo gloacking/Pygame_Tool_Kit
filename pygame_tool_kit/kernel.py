@@ -7,7 +7,7 @@ This class is used to manage the game scenes and switch between them.
 from pygame import init, QUIT
 from pygame import quit as close
 
-from .constants import EVENTS_MANAGER, KEYBOARD, DISPLAY, MOUSE, DELTA_TIME
+from .constants import EVENTS_MANAGER, DATABASE_MANAGER, KEYBOARD, DISPLAY, MOUSE, DELTA_TIME
 from .config import RESOLUTION_CENTER, RESOLUTION_SURFACE
 
 from .sources import Mask
@@ -102,5 +102,11 @@ class Kernel ():
 			DISPLAY.update ()
 			EVENTS_MANAGER.process_inputs ()
 			EVENTS_MANAGER.process_lazy_events ()
+
+		try:
+			DATABASE_MANAGER.disconnect ()
+
+		except:
+			pass
 
 		close ()

@@ -56,7 +56,7 @@ STORAGE_PATH : str = load_config_required_path ("storage")
 ICON_PATH : str = config_data.get ("icon_path")
 GAME_TITLE : str = config_data.get ("game_title", "Game")
 STORAGE_WITH_JSON : bool = config_data.get ("storage_with_json", True)
-STORAGE_DATABASE_NAME : str = config_data.get ("storage_database_name", "")
+STORAGE_DATABASE_NAME : str = config_data.get ("storage_database_name")
 
 if (config_data.get ("resolutions", False)):
 	RESOLUTIONS : tuple[tuple[int]] = tuple (tuple (resolution) for resolution in config_data["resolutions"])
